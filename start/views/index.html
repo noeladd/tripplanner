@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+
+    </head>
+    <body>
+        {% block content %}
+       <select name="hotels">
+           {% for hotel in templateHotels %}
+           <option value="{{hotel.name}}">{{hotel.name}}</option>
+           {% endfor %}
+       </select>
+
+       <select name="restaurant">
+           {% for restaurant in templateRestaurants %}
+           <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+           {% endfor %}
+       </select>
+       <select name="activity" id="">
+            {% for activity in templateActivities %}
+           <option value="{{activity.name}}">{{activity.name}}</option>
+           {% endfor %}   
+        </select> 
+       {% endblock %}
+    </body>
+</html>
