@@ -15,7 +15,7 @@ app.use(volleyball);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(express.static(__dirname +'/public'));
+app.use('/public', express.static(__dirname +'/public'));
 app.use('/bootstrap', express.static( __dirname + '/node_modules/bootstrap/dist'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
